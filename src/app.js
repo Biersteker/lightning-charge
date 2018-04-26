@@ -44,4 +44,5 @@ const apiToken = process.env.API_TOKEN || (console.error('Please configure your 
     console.log(`HTTP server running on ${ app.settings.host }:${ app.settings.port }`)
     app.emit('listening', server)
   })
+  server.timeout = 0;
 })()
